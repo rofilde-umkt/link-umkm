@@ -34,6 +34,7 @@ class TokoController extends Controller
 		$pengguna = $user->pengguna->id;
 		$data = $request->all();
 		$data['user_id'] = 0;
+		$data['status_user'] = 0;
 
 		$data['pengguna_id'] = $pengguna;
 
@@ -42,7 +43,6 @@ class TokoController extends Controller
 
 		return redirect(route('toko.index'))->withMessage("Data telah disimpan");
 
-		return redirect(route('toko.index'))->withMessage("Data telah disimpan");
 
 	}
 
