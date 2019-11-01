@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get('/profiltoko', function () {
     return view('profiltoko');
-});
+})->name("profil-toko");
 
 Route::match(["post", "get"], '/profile', function (\Illuminate\Http\Request $request) {
     $user = auth()->user();
@@ -142,6 +142,8 @@ Route::get("/kategori/{id}/delete", 'KategoriController@delete')->name("kategori
 
 
 Route::get("/itemtransaksi", 'ItemTransaksiController@index')->name("itemtransaksi.index");
+
+Route::get("/item-transaksi-toko", 'ItemTransaksiController@listPerToko')->name("itemtransaksi.list-toko");
 
 Route::post("/item-transaksi-update", 'ItemTransaksiController@updateTransaksi')->name("itemtransaksi.index.update");
 

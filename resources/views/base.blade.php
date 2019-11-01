@@ -146,18 +146,24 @@
                             </a>
                             <div class="collapse" id="tables">
                                 <ul class="nav nav-collapse">
+
                                     <li>
-                                        <a class="nav-link" href="/toko">
-                                            <span class="sub-item">Daftar Toko</span>
+                                        <a class="nav-link" href="{{ route('profil-toko') }}">
+                                            <span class="sub-item">TokoKU</span>
                                         </a>
-                                    </li>
-                                    <li>
+                                    </li><li>
                                         <a class="nav-link" href="/barang">
                                             <span class="sub-item">Daftar Barang</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a class="nav-link" href="/item-transaksi-toko">
+                                            <span class="sub-item">Transaksi Toko</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
+
                         </li>
                         @endif
                         @php
@@ -177,7 +183,7 @@
                             <div class="collapse" id="forms">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a class="nav-link" href="/transaksi/3/show">
+                                        <a class="nav-link" href="/transaksi">
                                             <span class="sub-item">Detail Pengantaran</span>
                                         </a>
                                     </li>
@@ -190,6 +196,7 @@
                             </div>
                         </li>
                         @endif
+                        @if(in_array("admin", $levelArray))
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#sidebarLayouts">
                                 <i class="fas fa-street-view"></i>
@@ -198,6 +205,11 @@
                             </a>
                             <div class="collapse" id="sidebarLayouts">
                                 <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="/transaksi">
+                                            <span class="sub-item">Transaksi Pembelian</span>
+                                        </a>
+                                    </li>
                                     <li>
                                         <a href="/users">
                                             <span class="sub-item">Pengguna</span>
@@ -216,6 +228,7 @@
                                 </ul>
                             </div>
                         </li>
+                        @endif
                         @endif
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#charts">

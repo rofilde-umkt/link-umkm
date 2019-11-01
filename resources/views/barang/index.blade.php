@@ -36,7 +36,7 @@
                 <td>
                     <div class="btn-group btn-group-sm">
                         <a class="btn btn-warning" href="{{ route('barang.edit', ['id' => $item->id]) }}">Edit</a>
-                        <a class="btn btn-danger" href="{{ route('barang.delete', ['id' => $item->id]) }}">Del</a>
+{{--                        <a class="btn btn-danger" href="{{ route('barang.delete', ['id' => $item->id]) }}">Del</a>--}}
                     </div>
                 </td>
             </tr>

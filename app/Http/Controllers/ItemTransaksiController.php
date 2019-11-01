@@ -128,4 +128,16 @@ class ItemTransaksiController extends Controller
 		ItemTransaksi::destroy($id);
 		return back()->withMessage("Data telah dihapus");
 	}
+
+    public function listPerToko()
+    {
+        $toko = auth()->user()->pengguna->toko;
+        $t = Transaksi::with(['items' => function($q) use($toko) {
+            $q->with(['barang' => function($q) use($toko) {
+                $q->where('toko_id', $toko->id);
+            }]);
+        }])->get();
+
+        return view('itemtransaksi.transaksi-toko', ['transactions' => $t]);
+	}
 }

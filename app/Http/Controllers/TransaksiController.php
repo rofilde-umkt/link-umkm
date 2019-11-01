@@ -15,7 +15,12 @@ class TransaksiController extends Controller
 {
     public function index()
     {
+        $user = auth()->user();
 		$transaksi = Transaksi::all();
+
+		if (strpos($user->level, "kurir")) {
+		    $transaksi = Transaksi::where('kurir_id', auth()->user()->pengguna->id)->get();
+        }
 
 		$data = [ 'transaksi' => $transaksi ];
 		return view("transaksi.index", $data);
