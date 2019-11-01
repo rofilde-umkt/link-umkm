@@ -82,7 +82,7 @@
                                             <div class="avatar-lg"><img src="../assets/img/profile4.jpg" alt="image profile" class="avatar-img rounded"></div>
                                             <div class="u-text">
                                                 <h4>{{ auth()->user()->pengguna->nama }}</h4>
-                                                <p class="text-muted">{{ auth()->user()->username }}</p><a href="/edit" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                                <p class="text-muted">{{ auth()->user()->username }}</p><a href="/profile" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                             </div>
                                         </div>
                                     </li>
