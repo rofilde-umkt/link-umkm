@@ -164,7 +164,7 @@
                         $user = auth()->user();
                         $levelArray = array_map(function($item){
                             return trim($item);
-                        }, explode($user->level));
+                        }, explode(",", $user->level));
 
                         @endphp
                         @if(in_array("kurir", $levelArray))
