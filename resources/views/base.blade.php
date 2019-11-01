@@ -112,6 +112,7 @@
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
                 <div class="sidebar-content">
                     <ul class="nav nav-primary">
+                        @if(auth()->user())
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#base">
                                 <i class="fas fa-layer-group"></i>
@@ -134,6 +135,9 @@
                                 </ul>
                             </div>
                         </li>
+
+
+                        @if(auth()->user()->pengguna->toko)
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#tables">
                                 <i class="fas fa-home"></i>
@@ -155,6 +159,15 @@
                                 </ul>
                             </div>
                         </li>
+                        @endif
+                        @php
+                        $user = auth()->user();
+                        $levelArray = array_map(function($item){
+                            return trim($item);
+                        }, explode($user->level));
+
+                        @endphp
+                        @if(in_array("kurir", $levelArray))
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#forms">
                                 <i class="fa fa-motorcycle"> </i>
@@ -176,6 +189,7 @@
                                 </ul>
                             </div>
                         </li>
+                        @endif
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#sidebarLayouts">
                                 <i class="fas fa-street-view"></i>
@@ -202,6 +216,7 @@
                                 </ul>
                             </div>
                         </li>
+                        @endif
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#charts">
                                 <i class="fas fa-camera"></i>
@@ -239,10 +254,6 @@
                                 </ul>
                             </div>
                         </li>
-
-
-
-                        
                     </ul>
                 </div>
             </div>
