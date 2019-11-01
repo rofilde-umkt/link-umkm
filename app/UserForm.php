@@ -16,7 +16,12 @@ class UserForm extends Form
 
 		->add("nama")
 		->add("nomor_ktp")
-		->add("kelamin")
+		->add("kelamin", 'choice', [
+		    'choices' => [
+		        1 => 'Pria',
+                2 => 'Wanita'
+            ]
+        ])
 		->add("alamat")
 		->add("email")
 

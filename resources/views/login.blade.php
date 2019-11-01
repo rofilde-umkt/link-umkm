@@ -1,9 +1,13 @@
 @extends('base')
 
 @section('content')
-	<h3>User Login</h3>
-	<hr>
-	{!! form($form) !!}
-
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">User Login</div>
+        </div>
+        <div class="card-body">
+            {!! form($form) !!}
+        </div>
+    </div>
 @endsection
 
