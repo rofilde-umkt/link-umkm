@@ -32,7 +32,7 @@
                 <td>{{ $item->harga }} </td>
                 <td>{{ $item->stok}}</td>
                 <td>{{ $item->pembelian->count()}}</td>
-                <td><img src="{{ $item->foto }}" width="100"> </td>
+                <td><img src="{{ asset('storage/'.$item->foto) }}" width="100"> </td>
                 <td>
                     <div class="btn-group btn-group-sm">
                         <a class="btn btn-warning" href="{{ route('barang.edit', ['id' => $item->id]) }}">Edit</a>

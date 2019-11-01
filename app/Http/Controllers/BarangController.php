@@ -8,12 +8,22 @@ use App\BarangForm;
 use App\Barang;
 use App\Toko;
 use App\User;
+use function GuzzleHttp\Psr7\str;
 
 class BarangController extends Controller
 {
     public function index()
     {
-		$barang = Barang::all();
+        $user = auth()->user();
+        $barang = [];
+        $pengguna = $user->pengguna;
+        if (strpos("admin", $user->level)) {
+            $barang = Barang::all();
+        } else {
+            if ($pengguna->toko) {
+                $barang = Barang::where('toko_id', $pengguna->toko->id)->get();
+            }
+        }
 		$data = [ 'barang' => $barang ];
 		return view("barang.index", $data);
 	}
