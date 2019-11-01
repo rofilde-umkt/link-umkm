@@ -111,66 +111,26 @@
         <div class="sidebar sidebar-style-2">
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
                 <div class="sidebar-content">
-                    <div class="user">
-                        <div class="avatar-sm float-left mr-2">
-                            <img src="../assets/img/profile4.jpg" alt="..." class="avatar-img rounded-circle">
-                        </div>
-                        <div class="info">
-                            <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-                                <span>
-                                    M Iqbal
-                                    <span class="user-level">User</span>
-                                </span>
-                            </a>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
                     <ul class="nav nav-primary">
-                        <li class="nav-item active">
-                            <a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
-                                <p>UMKM</p>
-                            </a>
-                        </li>
-                        <li class="nav-section">
-                            <span class="sidebar-mini-icon">
-                                <i class="fa fa-ellipsis-h"></i>
-                            </span>
-                            <h4 class="text-section">Komponen</h4>
-                        </li>
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#base">
                                 <i class="fas fa-layer-group"></i>
-                                <p>Customer</p>
+                                <p>Navigasi</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="base">
                                 <ul class="nav nav-collapse">
+
                                     <li>
-                                        <a class="nav-link" href="/">
-                                            <span class="sub-item">Barang</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" href="/transaksi">
+                                        <a class="nav-link" href="/itemtransaksi">
                                             <span class="sub-item">Keranjang</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="nav-link" href="/itemtransaksi">
+                                        <a class="nav-link" href="/my-transaksi">
                                             <span class="sub-item">Riwayat Transaksi</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a class="nav-link" href="https://www.youtube.com/watch?v=HRVlfz2MSVY">
-                                            <span class="sub-item">Edukasi Video</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" href="#">
-                                            <span class="sub-item">Edukasi Seminar</span>
-                                        </a>
-                                    </li>
-                                    <ul class="nav nav-collapse"></ul>
                                 </ul>
                             </div>
                         </li>
@@ -280,44 +240,9 @@
                             </div>
                         </li>
 
-                        <li class="nav-item">
-                            <div class="collapse" id="maps">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a class="nav-link" href="http://127.0.0.1:8000/users">
-                                            <span class="sub-item">Pengguna</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" href="http://127.0.0.1:8000/toko">
-                                            <span class="sub-item">Pemilik Toko</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" href="http://127.0.0.1:8000/kurir">
-                                            <span class="sub-item">Kurir</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
 
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#submenu">
-                                <i class="fas fa-bars"></i>
-                                <p>About</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="submenu">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a data-toggle="collapse" href="../assets/html/CS.html">
-                                            <span class="sub-item">Customer Service</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+
+                        
                     </ul>
                 </div>
             </div>
