@@ -18,8 +18,18 @@ class TokoForm extends Form
 		->add("nomor_hp")
 		->add("telepon")
 		->add("email")
-		->add("status_user")
-		->add("status")
+		->add("status_user", 'choice', [
+		    'choices' => [
+		        1 => 'Terverifikasi',
+                0 => 'Belum Terverifikasi'
+            ]
+        ])
+		->add("status", 'choice', [
+		    'choices' => [
+		        1 => 'Buka',
+                0 => 'Tutup'
+            ]
+        ])
 
 		->add('Simpan', 'submit')
 		;
