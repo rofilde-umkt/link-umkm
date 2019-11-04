@@ -187,11 +187,11 @@
                                             <span class="sub-item">Detail Pengantaran</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="/my-transaksi">
-                                            <span class="sub-item">Riwayat Transaksi</span>
-                                        </a>
-                                    </li>
+{{--                                    <li>--}}
+{{--                                        <a href="/my-transaksi">--}}
+{{--                                            <span class="sub-item">Riwayat Transaksi</span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
                                 </ul>
                             </div>
                         </li>
